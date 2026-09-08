@@ -51,12 +51,14 @@ export default function AboutPage() {
             <p className="text-xs tracking-widest text-muted uppercase mb-4">
               {pick(lang, 'Contact', '联系')}
             </p>
-            <a
-              href="mailto:1262259048@qq.com"
-              className="text-[15px] hover:text-wisteria transition-colors"
-            >
-              1262259048@qq.com
-            </a>
+            <div className="flex flex-col items-start gap-2 text-[15px]">
+              <a href="mailto:1262259048@qq.com" className="hover:text-wisteria transition-colors">
+                1262259048@qq.com
+              </a>
+              <a href="mailto:whui2516@gmail.com" className="hover:text-wisteria transition-colors">
+                whui2516@gmail.com
+              </a>
+            </div>
             <div className="flex gap-5 mt-4">
               <a href="https://github.com/WangHui022501" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
                 GitHub

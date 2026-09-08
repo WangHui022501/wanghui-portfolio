@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'system-ui', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Georgia', '"Songti SC"', '"SimSun"', 'serif'],
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       colors: {

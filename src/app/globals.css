@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'PingFang SC', 'PingFang TC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-serif: 'PingFang SC', 'PingFang TC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
 }
 
 html {
