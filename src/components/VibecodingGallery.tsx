@@ -21,6 +21,8 @@ function ProjectCard({ project, index }: { project: VibecodingProject; index: nu
         {project.video ? (
           <video
             src={project.video}
+            poster={project.videoPoster}
+            preload="none"
             controls
             playsInline
             loop

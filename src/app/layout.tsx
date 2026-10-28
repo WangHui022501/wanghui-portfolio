@@ -5,7 +5,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wanghui.art'),
+  metadataBase: new URL('https://wanghui-portfolio.vercel.app'),
   title: {
     default: 'Wang Hui 王慧 — Portfolio',
     template: '%s — Wang Hui 王慧',

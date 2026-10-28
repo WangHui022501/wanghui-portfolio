@@ -5,6 +5,7 @@ export interface VibecodingProject {
   descriptionZh: string
   /** Video source (mutually exclusive with images) */
   video?: string
+  videoPoster?: string
   /** Image sources for image-based projects */
   images?: string[]
   imageLayout?: 'landscape' | 'portrait'
@@ -39,6 +40,7 @@ export const vibecodingProjects: VibecodingProject[] = [
     descriptionZh:
       '将照片转化为动态粒子系统——计算美学的探索。',
     video: '/images/vibecoding/PhototoPaticle.mp4',
+    videoPoster: '/images/vibecoding/photo-to-particle-poster.jpg',
     tags: ['AIGC', 'Creative Coding'],
   },
   {
@@ -49,6 +51,7 @@ export const vibecodingProjects: VibecodingProject[] = [
     descriptionZh:
       '使用创意编程技术构建的像素艺术动态壁纸引擎。',
     video: '/images/vibecoding/PixelArtLiveWallpaper.mp4',
+    videoPoster: '/images/vibecoding/pixel-art-wallpaper-poster.jpg',
     link: 'https://github.com/WangHui022501/PixelArtLiveWallpaper',
     tags: ['Creative Coding', 'Open Source'],
   },

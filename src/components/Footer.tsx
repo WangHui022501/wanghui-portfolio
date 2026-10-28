@@ -11,16 +11,13 @@ export default function Footer() {
           © {new Date().getFullYear()} {pick(lang, 'Wang Hui', '王慧')} · {pick(lang, 'All rights reserved', '版权所有')}
         </span>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <a href="mailto:1262259048@qq.com" className="hover:text-wisteria transition-colors">
-            QQ Mail
-          </a>
           <a href="mailto:whui2516@gmail.com" className="hover:text-wisteria transition-colors">
             Gmail
           </a>
           <a href="https://github.com/WangHui022501" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
             GitHub
           </a>
-          <a href="https://xhslink.com/m/1OVIVzhF6kq" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
+          <a href="https://xhslink.cn/o/8AOHEFTUG6Q" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
             {pick(lang, 'Rednote', '小红书')}
           </a>
         </div>

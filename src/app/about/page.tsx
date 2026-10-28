@@ -52,9 +52,6 @@ export default function AboutPage() {
               {pick(lang, 'Contact', '联系')}
             </p>
             <div className="flex flex-col items-start gap-2 text-[15px]">
-              <a href="mailto:1262259048@qq.com" className="hover:text-wisteria transition-colors">
-                1262259048@qq.com
-              </a>
               <a href="mailto:whui2516@gmail.com" className="hover:text-wisteria transition-colors">
                 whui2516@gmail.com
               </a>
@@ -63,7 +60,7 @@ export default function AboutPage() {
               <a href="https://github.com/WangHui022501" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
                 GitHub
               </a>
-              <a href="https://xhslink.com/m/1OVIVzhF6kq" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
+              <a href="https://xhslink.cn/o/8AOHEFTUG6Q" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
                 {pick(lang, 'Rednote', '小红书')}
               </a>
             </div>
@@ -90,16 +87,6 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
-
-          {/* CV download */}
-          <div className="mt-8 pt-8 border-t border-border">
-            <a
-              href="/cv.pdf"
-              className="inline-flex items-center gap-2 text-xs tracking-widest uppercase border border-ink px-5 py-2.5 hover:bg-ink hover:text-paper transition-colors"
-            >
-              {pick(lang, 'Download CV', '下载简历')} ↓
-            </a>
-          </div>
         </div>
       </div>
     </div>
