@@ -8,7 +8,7 @@ const disciplines = [
   { label: 'Maps', zh: '地图', href: '/maps' },
   { label: 'Drawing', zh: '绘画', href: '/drawing' },
   { label: 'Photography', zh: '摄影', href: '/photography' },
-  { label: 'Vibecoding', zh: '编程', href: '/vibecoding' },
+  { label: 'Vibe Coding&AIGC', zh: '编程', href: '/vibecoding' },
 ]
 
 export default function AboutPage() {
@@ -60,8 +60,11 @@ export default function AboutPage() {
               <a href="https://github.com/WangHui022501" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
                 GitHub
               </a>
+              <a href="https://xhslink.com/m/1OVIVzhF6kq" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
+                {pick(lang, 'Rednote 01', '小红书 01')}
+              </a>
               <a href="https://xhslink.cn/o/8AOHEFTUG6Q" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-wisteria transition-colors">
-                {pick(lang, 'Rednote', '小红书')}
+                {pick(lang, 'Rednote 02', '小红书 02')}
               </a>
             </div>
           </div>

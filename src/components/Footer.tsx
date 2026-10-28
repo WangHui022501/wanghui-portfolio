@@ -17,8 +17,11 @@ export default function Footer() {
           <a href="https://github.com/WangHui022501" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
             GitHub
           </a>
+          <a href="https://xhslink.com/m/1OVIVzhF6kq" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
+            {pick(lang, 'Rednote 01', '小红书 01')}
+          </a>
           <a href="https://xhslink.cn/o/8AOHEFTUG6Q" target="_blank" rel="noopener noreferrer" className="hover:text-wisteria transition-colors">
-            {pick(lang, 'Rednote', '小红书')}
+            {pick(lang, 'Rednote 02', '小红书 02')}
           </a>
         </div>
       </div>

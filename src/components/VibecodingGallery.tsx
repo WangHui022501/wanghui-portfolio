@@ -6,7 +6,18 @@ import { useLang, pick } from '@/lib/i18n'
 import { vibecodingProjects } from '@/data/vibecoding'
 import type { VibecodingProject } from '@/data/vibecoding'
 
-function ProjectCard({ project, index }: { project: VibecodingProject; index: number }) {
+const websiteProjects = vibecodingProjects.filter((project) => !project.video)
+const motionProjects = vibecodingProjects.filter((project) => project.video)
+
+function ProjectCard({
+  project,
+  index,
+  compactMedia = false,
+}: {
+  project: VibecodingProject
+  index: number
+  compactMedia?: boolean
+}) {
   const { lang } = useLang()
   const [imageIndex, setImageIndex] = useState(0)
   const imageCount = project.images?.length ?? 0
@@ -34,7 +45,7 @@ function ProjectCard({ project, index }: { project: VibecodingProject; index: nu
         ) : project.images && project.images.length > 0 ? (
           <div
             className={`relative w-full bg-lavender/10 ${
-              project.imageLayout === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]'
+              project.imageLayout === 'portrait' && !compactMedia ? 'aspect-[3/4]' : 'aspect-[4/3]'
             }`}
           >
             <Image
@@ -130,10 +141,30 @@ function ProjectCard({ project, index }: { project: VibecodingProject; index: nu
 
 export default function VibecodingGallery() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-      {vibecodingProjects.map((project, i) => (
-        <ProjectCard key={project.title} project={project} index={i} />
-      ))}
+    <div className="space-y-16 md:space-y-20">
+      <section>
+        <div className="mb-7 flex items-baseline justify-between border-b border-border pb-3">
+          <h2 className="font-serif text-2xl font-light text-ink">Web Projects</h2>
+          <span className="text-xs tracking-widest text-muted">网站项目</span>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
+          {websiteProjects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} index={i} compactMedia />
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div className="mb-7 flex items-baseline justify-between border-b border-border pb-3">
+          <h2 className="font-serif text-2xl font-light text-ink">Motion Experiments</h2>
+          <span className="text-xs tracking-widest text-muted">动态实验</span>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+          {motionProjects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} index={i} />
+          ))}
+        </div>
+      </section>
     </div>
   )
 }

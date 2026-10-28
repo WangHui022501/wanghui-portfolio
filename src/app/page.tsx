@@ -5,7 +5,7 @@ import { useLang, pick } from '@/lib/i18n'
 
 const sections = [
   { href: '/architecture', label: 'Architecture', zh: '建筑', num: '01' },
-  { href: '/vibecoding', label: 'AIGC&Vibecoding', zh: '编程', num: '02' },
+  { href: '/vibecoding', label: 'Vibe Coding&AIGC', zh: '编程', num: '02' },
   { href: '/maps', label: 'Maps', zh: '地图', num: '03' },
   { href: '/drawing', label: 'Drawing', zh: '绘画', num: '04' },
   { href: '/photography', label: 'Photography', zh: '摄影', num: '05' },
