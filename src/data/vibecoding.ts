@@ -7,6 +7,7 @@ export interface VibecodingProject {
   video?: string
   /** Image sources for image-based projects */
   images?: string[]
+  imageLayout?: 'landscape' | 'portrait'
   link?: string
   /** Multiple links for projects with more than one external URL */
   links?: { label: string; url: string }[]
@@ -14,6 +15,22 @@ export interface VibecodingProject {
 }
 
 export const vibecodingProjects: VibecodingProject[] = [
+  {
+    title: 'Paper Studio',
+    titleZh: '纸间',
+    description:
+      'A browser-based creative studio for composing words and images into posters, cards, and expressive visual pieces.',
+    descriptionZh:
+      '一个在浏览器中自由编排文字与图像的创作空间，用于制作海报、卡片与富有表达力的视觉作品。',
+    images: [
+      '/images/vibecoding/paperstudio-poster-03.jpg',
+      '/images/vibecoding/paperstudio-poster-01.jpg',
+      '/images/vibecoding/paperstudio-poster-02.jpg',
+    ],
+    imageLayout: 'portrait',
+    link: 'https://paperstudio.club/',
+    tags: ['AIGC', 'Creative Tool', 'Web App'],
+  },
   {
     title: 'Photo to Particle',
     titleZh: '照片粒子化',

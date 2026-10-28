@@ -1,12 +1,15 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 import { useLang, pick } from '@/lib/i18n'
 import { vibecodingProjects } from '@/data/vibecoding'
 import type { VibecodingProject } from '@/data/vibecoding'
 
 function ProjectCard({ project, index }: { project: VibecodingProject; index: number }) {
   const { lang } = useLang()
+  const [imageIndex, setImageIndex] = useState(0)
+  const imageCount = project.images?.length ?? 0
 
   return (
     <div
@@ -27,15 +30,41 @@ function ProjectCard({ project, index }: { project: VibecodingProject; index: nu
             Your browser does not support the video tag.
           </video>
         ) : project.images && project.images.length > 0 ? (
-          <div className="relative w-full">
+          <div
+            className={`relative w-full bg-lavender/10 ${
+              project.imageLayout === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]'
+            }`}
+          >
             <Image
-              src={project.images[0]}
-              alt={project.title}
-              width={1200}
-              height={900}
-              className="w-full h-auto block"
+              src={project.images[imageIndex]}
+              alt={`${project.title} ${imageIndex + 1}`}
+              fill
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
+            {imageCount > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => setImageIndex((imageIndex - 1 + imageCount) % imageCount)}
+                  aria-label="Previous image"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 grid h-8 w-8 place-items-center rounded-full bg-paper/90 text-ink shadow-sm transition-colors hover:bg-paper"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setImageIndex((imageIndex + 1) % imageCount)}
+                  aria-label="Next image"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 grid h-8 w-8 place-items-center rounded-full bg-paper/90 text-ink shadow-sm transition-colors hover:bg-paper"
+                >
+                  →
+                </button>
+                <span className="absolute bottom-3 right-3 rounded-full bg-ink/75 px-2.5 py-1 font-mono text-[10px] tracking-wider text-paper">
+                  {String(imageIndex + 1).padStart(2, '0')} / {String(imageCount).padStart(2, '0')}
+                </span>
+              </>
+            )}
           </div>
         ) : null}
       </div>
